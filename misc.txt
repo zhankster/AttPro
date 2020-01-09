@@ -1,0 +1,170 @@
+﻿Zzbh1984
+        Tuple<int, int> from = new Tuple<int, int>(1532, 464);
+        Tuple<int, int> to = new Tuple<int, int>(2002, 720720);     
+	     //public string extract_text(string fileName)
+        //{
+        //    string output = "";
+        //    var currentPath = Path.GetFullPath(fileName);
+        //    var fullPath = Directory.GetParent(currentPath).FullName;
+        //    var nameOnly = Path.GetFileNameWithoutExtension(fileName);
+
+        //    var Ocr = new IronOcr.AdvancedOcr()
+        //    {
+        //        CleanBackgroundNoise = true,
+        //        EnhanceContrast = true,
+        //        EnhanceResolution = true,
+        //        Language = IronOcr.Languages.English.OcrLanguagePack,
+        //        Strategy = AdvancedOcr.OcrStrategy.Advanced,
+        //        ColorSpace = AdvancedOcr.OcrColorSpace.Color,
+        //        //DetectWhiteTextOnDarkBackgrounds = true,
+        //        InputImageType = AdvancedOcr.InputTypes.Document,
+        //        //RotateAndStraighten = true,
+        //        //ReadBarCodes = true,
+        //        //ColorDepth = 32
+        //    }; 
+        //    Stopwatch watch = new Stopwatch();
+        //    watch.Start();
+
+        //    var testDocument = fileName;
+        //    var PagesToRead = new[] { 1 };
+        //    //var Area = new System.Drawing.Rectangle() { X = 0, Y = 310, Height = 285, Width = 2000 };
+        //    var Area = new System.Drawing.Rectangle() { X = 1430, Y = 310, Height = 285, Width = 540 };
+        //    var Results = Ocr.ReadPdf(testDocument, Area, PagesToRead);
+        //    var arr_result = Results.Text.Split('\n');
+
+        //    for (int i = 0; i < arr_result.Length; i++)
+        //    {
+        //        write_activity(arr_result[i] + "[" + i.ToString() + "]");
+        //    }
+
+        //    output = Results.Text;
+        //    Console.WriteLine(output);
+        //    System.IO.File.WriteAllText(fullPath + @"\" + nameOnly + ".txt", output);
+
+        //    watch.Stop();
+        //    var txt= watch.Elapsed.TotalSeconds.ToString();
+        //    write_activity(txt);
+
+        //    return output;
+        //}
+
+        public string extract_from_image(string fileName)
+        {
+            string output = "";
+            var currentPath = Path.GetFullPath(fileName);
+            var fullPath = Directory.GetParent(currentPath).FullName;
+            var nameOnly = Path.GetFileNameWithoutExtension(fileName);
+
+            //var Ocr = new IronOcr.AdvancedOcr()
+            //{
+            //    CleanBackgroundNoise = true,
+            //    EnhanceContrast = true,
+            //    EnhanceResolution = true,
+            //    Language = IronOcr.Languages.English.OcrLanguagePack,
+            //    Strategy = AdvancedOcr.OcrStrategy.Advanced,
+            //    ColorSpace = AdvancedOcr.OcrColorSpace.Color,
+            //    //DetectWhiteTextOnDarkBackgrounds = true,
+            //    InputImageType = AdvancedOcr.InputTypes.Document,
+            //    //RotateAndStraighten = true,
+            //    //ReadBarCodes = true,
+            //    ColorDepth = 32
+            //};
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+
+            //var testDocument = fileName;
+            //var PagesToRead = new[] { 1 };
+            ////var Area = new System.Drawing.Rectangle() { X = 0, Y = 310, Height = 285, Width = 2000 };
+            //var Area = new System.Drawing.Rectangle() { X = 1430, Y = 310, Height = 285, Width = 540 };
+            //var Results = Ocr.Read(fileName);
+            //var arr_result = Results.Text.Split('\n');
+
+            //for (int i = 0; i < arr_result.Length; i++)
+            //{
+            //    write_activity(arr_result[i] + "[" + i.ToString() + "]");
+            //}
+
+            //output = Results.Text;
+            //Console.WriteLine(output);
+            //System.IO.File.WriteAllText(fullPath + @"\" + nameOnly + ".txt", output);
+
+            watch.Stop();
+            var txt = watch.Elapsed.TotalSeconds.ToString();
+            write_activity(txt);
+
+            return output;
+        }
+
+        #region Click Events
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+
+            //var msg_ret = download_attachments();
+            //Thread.Sleep(1000);
+            //write_activity(msg_ret);
+            //MessageBox.Show(get_text_after("IHS_001_11182019104715.pdf", '_'));
+        }
+
+	 
+	 var Ocr = new IronOcr.AdvancedOcr()
+            {
+                //CleanBackgroundNoise = true,
+                //EnhanceContrast = true,
+                //EnhanceResolution = true,
+                //Language = IronOcr.Languages.English.OcrLanguagePack,
+                //Strategy = IronOcr.AdvancedOcr.OcrStrategy.Advanced,
+                //ColorSpace = AdvancedOcr.OcrColorSpace.Color,
+                //DetectWhiteTextOnDarkBackgrounds = true,
+                //InputImageType = AdvancedOcr.InputTypes.AutoDetect,
+                //RotateAndStraighten = true,
+                //ReadBarCodes = true,
+                //ColorDepth = 4
+            };
+
+			Stopwatch watch = new Stopwatch();
+            watch.Start();
+
+            var testDocument = @"D:\Users\hanka\Downloads\pdf\IHS_005.pdf";
+            var Results = Ocr.Read(testDocument);
+            Console.WriteLine(Results.Text);
+            //Console.WriteLine("Barcodes:" + String.Join(",", Results.Barcodes.Select(b => b.Value)));
+
+            watch.Stop();
+            var Text = watch.Elapsed.TotalSeconds.ToString();
+            Console.WriteLine(Text);
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadLine();
+			
+			
+			string hostname = "outlook.office365.com",
+            username = "zrefugee@gmail.com",
+            password = "Zzbh1984",
+            mailbox = "IHS",
+            attachmentdirectory = @"D:\Dev\zMisc\attachments\"; ;
+            int att_count = 0;
+
+                //IEnumerable<MailMessage> mgs = client.GetMessages(uids,
+                //    (Bodypart part) =>
+                //    {
+                //        // We're only interested in attachments.
+                //        if (part.Disposition.Type == ContentDispositionType.Attachment)
+                //        {
+                //            //Int64 TwoMegabytes = 2;
+                //            Int64 TwoMegabytes = (1024 * 1024 * 2);
+                //            if (part.Size > TwoMegabytes)
+                //            {
+
+                //                // Don't download this attachment.
+                //                Console.WriteLine("Too Big");
+                //                return false;
+                //            }
+                //            Console.WriteLine("OK");
+
+                //        }
+
+                //        // Fetch MIME part and include it in the returned MailMessage instance.
+
+                //        return true;
+                //    }
+                //);

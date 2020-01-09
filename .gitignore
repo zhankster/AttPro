@@ -1,0 +1,11 @@
+#Main Nu Package folder
+packages/
+
+#Binary files
+bin/Debug/
+
+3rdParty/
+tessdata/
+x64/
+x86/
+obj/

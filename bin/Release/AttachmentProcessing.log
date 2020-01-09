@@ -1,0 +1,41 @@
+﻿2019-12-05 15:48:15.975 AttachmentProcessing.log is created.
+2019-12-05 15:48:15.977 [ERROR]   This is a test error message to log
+2019-12-05 15:57:53.741 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1F99999999.pdf already exists
+2019-12-05 15:57:55.756 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1C99999999.pdf already exists
+2019-12-05 15:57:57.486 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1A99999999.pdf already exists
+2019-12-05 16:02:52.442 [ERROR]   Invalid Size value
+2019-12-05 16:19:59.319 [ERROR]   Invalid Size value
+2019-12-05 16:19:59.321 [ERROR]   Invalid numeric value
+2019-12-05 16:20:17.533 [ERROR]   Invalid Size value
+2019-12-05 16:20:17.535 [ERROR]   Invalid numeric value
+2019-12-05 16:23:03.772 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1F99999999.pdf already exists
+2019-12-05 16:23:05.677 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1C99999999.pdf already exists
+2019-12-05 16:23:07.144 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1A99999999.pdf already exists
+2019-12-27 16:53:42.100 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1C99999999.pdf already exists
+2019-12-27 16:53:48.663 [ERROR]   Illegal characters in path.
+2019-12-27 16:55:50.641 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1C99999999.pdf already exists
+2019-12-27 16:55:53.803 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\JHBOP99999.pdf already exists
+2019-12-27 16:55:55.990 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\SH99999999.pdf already exists
+2019-12-30 12:29:40.971 [ERROR]   xm001 NO LOGIN failed.
+2019-12-30 15:23:26.322 [ERROR]   Illegal characters in path.
+2019-12-30 15:27:54.680 [ERROR]   Illegal characters in path.
+2019-12-30 15:45:49.196 [ERROR]   The file C:\Files\renamed\PJF9999999.pdf already exists
+2019-12-30 15:45:51.188 [ERROR]   The file C:\Files\renamed\TH99999999.pdf already exists
+2019-12-30 15:45:53.180 [ERROR]   The file C:\Files\renamed\TL89999999.pdf already exists
+2019-12-30 15:46:06.635 [ERROR]   The file C:\Files\renamed\F399999999.pdf already exists
+2019-12-30 16:03:12.361 [ERROR]   The file C:\Files\renamed\A.pdf already exists
+2019-12-30 16:03:17.784 [ERROR]   The file C:\Files\renamed\A.pdf already exists
+2019-12-30 16:03:24.926 [ERROR]   The file C:\Files\renamed\A.pdf already exists
+2019-12-30 16:12:47.430 [ERROR]   Illegal characters in path.
+2019-12-30 16:17:25.593 [ERROR]   A generic error occurred in GDI+.
+2019-12-30 16:18:30.442 [ERROR]   Insufficient memory to continue the execution of the program.
+2019-12-30 16:20:55.260 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
+2019-12-30 16:21:17.458 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
+2019-12-30 16:23:33.057 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
+2019-12-30 16:25:51.598 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
+2019-12-30 16:27:14.164 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
+2019-12-30 16:29:21.616 [ERROR]   unable to open image 'C:\Files\process\DOC12302019031307.jpg': No such file or directory @ error/blob.c/OpenBlob/3497
+2019-12-30 16:30:27.737 [ERROR]   Illegal characters in path.
+2019-12-30 17:12:19.607 [ERROR]   Insufficient memory to continue the execution of the program.
+2019-12-30 17:14:58.702 [ERROR]   Insufficient memory to continue the execution of the program.
+2020-01-03 08:54:13.554 [ERROR]   The system cannot find the file specified
