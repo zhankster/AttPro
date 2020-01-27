@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Net.Mail;
 using System.IO;
 using System.Linq;
-using Patagames.Ocr;
-using Patagames.Ocr.Enums;
 using System.Drawing.Imaging;
 using Ghostscript.NET.Rasterizer;
 using System.Windows.Forms;
 using S22.Imap;
-using System.Threading;
 using System.Diagnostics;
 using ImageMagick;
-using System.Configuration;
 using System.Drawing;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 
 
 namespace AttachmentProcessing
@@ -219,7 +216,7 @@ namespace AttachmentProcessing
             }
         }
 
-        void PdfToTif(string inputFile, string outputFileName)
+        void PdfToJpg(string inputFile, string outputFileName)
         {
             string msg = "Invalid numeric value";
             int dpi = ParseInt(txtDpi.Text, out bool valid);
@@ -280,35 +277,16 @@ namespace AttachmentProcessing
             }
         }
 
-        public static string ConvertImageToText(string pth)
-        {
-            string outname = "";
-            OcrApi.PathToEngine = Application.StartupPath + @"\x86\tesseract.dll";
-
-            using (var api = OcrApi.Create())
-            {
-                api.Init(Languages.English);
-                string plainText = api.GetTextFromImage(pth);
-
-                Console.WriteLine(plainText);  //ACCT. #
-                Console.WriteLine("Trim: " + plainText.Replace("ACCT. #", "").Trim());
-                outname = plainText.Replace("ACCT. #", "").Trim().Replace(" ", "");
-            }
-
-            return outname;
-        }
-
         public string TextFromImage(string pth)
         {
-            //C:\Users\Owner\source\repos\AttachmentProcessing
             string result = "";
-            try
+            try 
             {
                 ProcessStartInfo start = new ProcessStartInfo();
-                //WriteActivity(txtPythonFolder.Text + @"python.exe");
                 start.FileName = txtPythonFolder.Text + @"python.exe";
-                //WriteActivity(Application.StartupPath + @"\scripts\ocr.py " + pth);
+                //start.Arguments = "r \"" + Application.StartupPath + "\\scripts\\ocr.py\" " + pth ;
                 start.Arguments = Application.StartupPath + @"\scripts\ocr.py " + pth;
+                //WriteActivity("SP: " + start.Arguments.ToString());
                 start.UseShellExecute = false;
                 start.WindowStyle = ProcessWindowStyle.Hidden;
                 start.CreateNoWindow = true;
@@ -318,9 +296,7 @@ namespace AttachmentProcessing
                     using (StreamReader reader = process.StandardOutput)
                     {
                         result = reader.ReadToEnd();
-                        WriteActivity(result);
-                        //Clipboard.SetText(result);
-                        //WriteActivity(pth);
+                        WriteActivity("Text: "+ result);
                     }
                 }
             }
@@ -332,7 +308,22 @@ namespace AttachmentProcessing
             return result;
         }
 
-        public Point ParsePoint(string strPt, out bool valid)
+        public bool CheckNonAlpha(string str)
+        {
+            if (string.IsNullOrEmpty(str))
+                return false;
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (!(char.IsLetter(str[i])) && (!(char.IsNumber(str[i]))))
+                    return false;
+            }
+
+            return true;
+        }
+ 
+
+    public static Point ParsePoint(string strPt, out bool valid)
         {
             string msg;
             valid = true;
@@ -377,7 +368,7 @@ namespace AttachmentProcessing
             return pt;
         }
 
-        public int ParseInt(string num, out bool valid)
+        public static int ParseInt(string num, out bool valid)
         {
             int x = 0;
             string msg;
@@ -397,11 +388,11 @@ namespace AttachmentProcessing
             return x;
         }
 
-        public void LogError(string msg)
+        public static void LogError(string msg)
         {
             SimpleLogger sl = new SimpleLogger();
             sl.Error(msg);
-            WriteActivity(msg);
+            //WriteActivity(msg);
         }
 
         public static string Encrypt(string textToEncrypt)
@@ -471,6 +462,7 @@ namespace AttachmentProcessing
             WriteActivity("File renaming started");
             var title = this.Text;
             var txt = "";
+            var cnt = 0;
             this.Text = title + " - Renaming...";
 
             try
@@ -481,13 +473,12 @@ namespace AttachmentProcessing
                 {
 
                     var fileName = Path.GetFileNameWithoutExtension(pdfFile);
-                    //PdfToPng(pdfFile, fileName);
-                    PdfToTif(pdfFile, fileName);
+                    WriteActivity("Renaming file: " + pdfFile);
+                    PdfToJpg(pdfFile, fileName);
                     cropImgIn = outputFolder + fileName + ".jpg";
                     cropImgOut = txtRenamedFolder.Text;
 
                     Crop(cropImgIn, cropImgIn);
-                    //var outName = ConvertImageToText(cropImgIn);
                     var outName = TextFromImage(cropImgIn).Trim();
                     if (string.IsNullOrEmpty(outName))
                     {
@@ -499,19 +490,36 @@ namespace AttachmentProcessing
                     if (File.Exists(outPath))
                     {
                         var msg = "The file " + outPath + " already exists";
-                        MessageBox.Show(msg, "File Exits", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //MessageBox.Show(msg, "File Exits", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        WriteActivity(msg);
                         LogError(msg);
+                        string fileAppend = DateTime.Now.AddSeconds(cnt).ToString("MMddyyyyhhmmss") + "_";
+                        var existingFile = outputFolderNew + fileAppend + outName + ".pdf";
+                        File.Copy(pdfFile, existingFile);
+                        WriteActivity("File written as: " + existingFile);
+                        cnt++;
                         continue;
                     }
-                    File.Copy(pdfFile, outPath);
-                    File.Delete(cropImgIn);
-                    WriteActivity("File: " + outPath + " written");
+
+                    try
+                    {
+                        File.Copy(pdfFile, outPath);
+                        File.Delete(cropImgIn);
+                        WriteActivity("File: " + outPath + " written");
+                    }
+                    catch(Exception ex)
+                    {
+                        LogError(ex.Message);
+                        WriteActivity(ex.Message);
+                        continue;
+                    }
                 }
                 
             }
             catch(Exception ex)
             {
                 LogError(ex.Message);
+                WriteActivity(ex.Message);
             }
             finally
             {
@@ -525,57 +533,15 @@ namespace AttachmentProcessing
 
         private void BtnDownload_Click(object sender, EventArgs e)
         {
-
             var msg_ret = DownloadAttachments();
-            //Thread.Sleep(1000);
             WriteActivity(msg_ret);
-            //MessageBox.Show(get_text_after("IHS_001_11182019104715.pdf", '_'));
         }
 
         private void BtnTest_Click(object sender, EventArgs e)
         {
-            TextFromImage(@"C:\Users\Owner\source\repos\AttachmentProcessing\scripts\DOC12302019031312.jpg");
-
-            //ProcessStartInfo start = new ProcessStartInfo();
-            //start.FileName = @"C:\Program Files\Python38\python.exe";
-            ////start.WorkingDirectory = @"D:\script";
-            ////start.Arguments = string.Format(@"C:\Users\Owner\source\repos\AttachmentProcessing\scripts\ocr.py -a {0} -b {1} ", "some param", "some other param");
-            ////start.Arguments = string.Format(@"C:\Users\Owner\source\repos\AttachmentProcessing\scripts\ocr.py");
-            //start.UseShellExecute = false;
-            //start.WindowStyle = ProcessWindowStyle.Hidden;
-            //start.CreateNoWindow = true;
-            //start.RedirectStandardOutput = true;
-            //using (Process process = Process.Start(start))
-            //{
-            //    using (StreamReader reader = process.StandardOutput)
-            //    {
-            //        string result = reader.ReadToEnd();
-            //        WriteActivity(result);
-            //        Clipboard.SetText(result);
-            //    }
-            //}
-
-            //LogError("This is a test error message to log");
-            //LogWriter lw = new LogWriter("Test");
-            //lw.LogWrite("This is a test error message");
-            //writeConfig("mailbox","IRS");
-            //var r = readConfig("mailbox");
-            //writeActivity(r);
-
-            //Crop(txtProcessFolder.Text, txtProcessFolder.Text);
-            //var en = Encrypt("Somepassword");
-            //MessageBox.Show(en);
-            //var dn = Decrypt(en);
-            //MessageBox.Show(dn);
-            //var path = @"D:\Dev\zMisc\attachments\";
-            ////read_files(txtTempFolder.Text); //1F99999999.pdf
-            ////var filename = path + "IHS_002.pdf";
-            ////var filename = path + "1F99999999.pdf";
-            ////var filename = path + "1C99999999.pdf";
-            //var filename = path + "1A99999999.pdf";
-            //writeActivity("Reading text from " + filename);
-            //txtAttOut.Text = extract_text(filename); 
-            //DirectorySearch(txtTempFolder.Text);
+            var test = txtAttOut.Text.Trim();
+            var check = CheckNonAlpha(test);
+            MessageBox.Show(check.ToString());
         }
 
         private void BtnSingleFile_Click(object sender, EventArgs e)
@@ -595,8 +561,8 @@ namespace AttachmentProcessing
             cropImgOut = txtRenamedFolder.Text;
 
             Crop(cropImgIn, cropImgIn);
-            ConvertImageToText(cropImgIn);
-            var outName = ConvertImageToText(cropImgIn);
+            TextFromImage(cropImgIn);
+            var outName = TextFromImage(cropImgIn);
             var outPath = outputFolderNew + outName + ".pdf";
 
             if (File.Exists(outPath))
@@ -658,7 +624,6 @@ namespace AttachmentProcessing
             {
                 var btnName = ((sender as Button).Name);
                 bool valid;
-                string prevTxt = "";
                 string msg = "Invalid numeric value";
                 (sender as Button).BackColor = Color.Yellow;
                 Point pt = new Point(10000, 10000);

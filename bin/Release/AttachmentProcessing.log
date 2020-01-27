@@ -1,41 +1,40 @@
-﻿2019-12-05 15:48:15.975 AttachmentProcessing.log is created.
-2019-12-05 15:48:15.977 [ERROR]   This is a test error message to log
-2019-12-05 15:57:53.741 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1F99999999.pdf already exists
-2019-12-05 15:57:55.756 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1C99999999.pdf already exists
-2019-12-05 15:57:57.486 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1A99999999.pdf already exists
-2019-12-05 16:02:52.442 [ERROR]   Invalid Size value
-2019-12-05 16:19:59.319 [ERROR]   Invalid Size value
-2019-12-05 16:19:59.321 [ERROR]   Invalid numeric value
-2019-12-05 16:20:17.533 [ERROR]   Invalid Size value
-2019-12-05 16:20:17.535 [ERROR]   Invalid numeric value
-2019-12-05 16:23:03.772 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1F99999999.pdf already exists
-2019-12-05 16:23:05.677 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1C99999999.pdf already exists
-2019-12-05 16:23:07.144 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1A99999999.pdf already exists
-2019-12-27 16:53:42.100 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1C99999999.pdf already exists
-2019-12-27 16:53:48.663 [ERROR]   Illegal characters in path.
-2019-12-27 16:55:50.641 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\1C99999999.pdf already exists
-2019-12-27 16:55:53.803 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\JHBOP99999.pdf already exists
-2019-12-27 16:55:55.990 [ERROR]   The file D:\Dev\zMisc\attachments\pdf\SH99999999.pdf already exists
-2019-12-30 12:29:40.971 [ERROR]   xm001 NO LOGIN failed.
-2019-12-30 15:23:26.322 [ERROR]   Illegal characters in path.
-2019-12-30 15:27:54.680 [ERROR]   Illegal characters in path.
-2019-12-30 15:45:49.196 [ERROR]   The file C:\Files\renamed\PJF9999999.pdf already exists
-2019-12-30 15:45:51.188 [ERROR]   The file C:\Files\renamed\TH99999999.pdf already exists
-2019-12-30 15:45:53.180 [ERROR]   The file C:\Files\renamed\TL89999999.pdf already exists
-2019-12-30 15:46:06.635 [ERROR]   The file C:\Files\renamed\F399999999.pdf already exists
-2019-12-30 16:03:12.361 [ERROR]   The file C:\Files\renamed\A.pdf already exists
-2019-12-30 16:03:17.784 [ERROR]   The file C:\Files\renamed\A.pdf already exists
-2019-12-30 16:03:24.926 [ERROR]   The file C:\Files\renamed\A.pdf already exists
-2019-12-30 16:12:47.430 [ERROR]   Illegal characters in path.
-2019-12-30 16:17:25.593 [ERROR]   A generic error occurred in GDI+.
-2019-12-30 16:18:30.442 [ERROR]   Insufficient memory to continue the execution of the program.
-2019-12-30 16:20:55.260 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
-2019-12-30 16:21:17.458 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
-2019-12-30 16:23:33.057 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
-2019-12-30 16:25:51.598 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
-2019-12-30 16:27:14.164 [ERROR]   memory allocation failed `C:\Files\process\DOC12302019031308.tif' @ error/tiff.c/ReadTIFFImage/1838
-2019-12-30 16:29:21.616 [ERROR]   unable to open image 'C:\Files\process\DOC12302019031307.jpg': No such file or directory @ error/blob.c/OpenBlob/3497
-2019-12-30 16:30:27.737 [ERROR]   Illegal characters in path.
-2019-12-30 17:12:19.607 [ERROR]   Insufficient memory to continue the execution of the program.
-2019-12-30 17:14:58.702 [ERROR]   Insufficient memory to continue the execution of the program.
-2020-01-03 08:54:13.554 [ERROR]   The system cannot find the file specified
+﻿2020-01-13 16:52:40.609 AttachmentProcessing.log is created.
+2020-01-13 16:52:40.611 [ERROR]   The file C:\Files\renamed\FWF9999999.pdf already exists
+2020-01-13 16:52:42.678 [ERROR]   The file C:\Files\renamed\HKF9999999.pdf already exists
+2020-01-13 16:52:44.749 [ERROR]   The file C:\Files\renamed\HVF9999999.pdf already exists
+2020-01-13 17:06:13.093 [ERROR]   The file C:\Files\renamed\FWF9999999.pdf already exists
+2020-01-13 17:06:15.337 [ERROR]   The file C:\Files\renamed\HKF9999999.pdf already exists
+2020-01-13 17:06:17.775 [ERROR]   The file C:\Files\renamed\HVF9999999.pdf already exists
+2020-01-13 17:25:19.880 [ERROR]   xm001 NO LOGIN failed.
+2020-01-13 17:25:40.867 [ERROR]   xm001 NO LOGIN failed.
+2020-01-13 18:01:13.181 [ERROR]   xm001 NO LOGIN failed.
+2020-01-14 10:17:30.909 [ERROR]   The file C:\Files\renamed\1C99999999.pdf already exists
+2020-01-14 10:17:33.185 [ERROR]   The file C:\Files\renamed\1F99999999.pdf already exists
+2020-01-14 10:17:35.368 [ERROR]   The file C:\Files\renamed\1X99999999.pdf already exists
+2020-01-14 10:26:15.921 [ERROR]   The file C:\Files\renamed\1C99999999.pdf already exists
+2020-01-14 10:26:18.160 [ERROR]   The file C:\Files\renamed\1F99999999.pdf already exists
+2020-01-14 10:26:20.419 [ERROR]   The file C:\Files\renamed\1X99999999.pdf already exists
+2020-01-14 10:32:55.760 [ERROR]   The file C:\Files\renamed\1C99999999.pdf already exists
+2020-01-14 10:32:57.623 [ERROR]   The file C:\Files\renamed\1F99999999.pdf already exists
+2020-01-14 10:32:59.512 [ERROR]   The file C:\Files\renamed\1X99999999.pdf already exists
+2020-01-14 11:08:29.215 [ERROR]   The file C:\Files\renamed\1C99999999.pdf already exists
+2020-01-14 11:08:31.160 [ERROR]   The file C:\Files\renamed\1F99999999.pdf already exists
+2020-01-14 11:08:33.185 [ERROR]   The file C:\Files\renamed\1X99999999.pdf already exists
+2020-01-14 11:43:00.527 [ERROR]   The file C:\Files\renamed\1C99999999.pdf already exists
+2020-01-14 11:43:02.422 [ERROR]   The file C:\Files\renamed\1F99999999.pdf already exists
+2020-01-14 11:43:04.342 [ERROR]   The file C:\Files\renamed\1X99999999.pdf already exists
+2020-01-14 11:44:43.649 [ERROR]   The file C:\Files\renamed\1C99999999.pdf already exists
+2020-01-14 11:44:45.515 [ERROR]   The file C:\Files\renamed\1F99999999.pdf already exists
+2020-01-14 11:44:47.449 [ERROR]   The file C:\Files\renamed\1X99999999.pdf already exists
+2020-01-14 12:26:48.965 [ERROR]   The file C:\Files\renamed\1C99999999.pdf already exists
+2020-01-14 12:26:51.125 [ERROR]   The file C:\Files\renamed\1F99999999.pdf already exists
+2020-01-14 12:26:53.370 [ERROR]   The file C:\Files\renamed\1X99999999.pdf already exists
+2020-01-14 12:41:22.058 [ERROR]   The given path's format is not supported.
+2020-01-14 12:41:23.999 [ERROR]   The given path's format is not supported.
+2020-01-14 12:41:25.961 [ERROR]   The given path's format is not supported.
+2020-01-14 12:44:01.065 [ERROR]   The file C:\Files\renamed\1C99999999.pdf already exists
+2020-01-14 12:44:03.186 [ERROR]   The file C:\Files\renamed\1F99999999.pdf already exists
+2020-01-14 12:44:05.300 [ERROR]   The file C:\Files\renamed\1X99999999.pdf already exists
+2020-01-15 09:29:58.062 [ERROR]   The file C:\Files\renamed\1C99999999.pdf already exists
+2020-01-15 09:29:59.984 [ERROR]   The file C:\Files\renamed\1F99999999.pdf already exists
+2020-01-15 09:30:01.941 [ERROR]   The file C:\Files\renamed\1X99999999.pdf already exists

@@ -1,0 +1,42 @@
+﻿            //TextFromImage(@"C:\Users\Owner\source\repos\AttachmentProcessing\scripts\DOC12302019031312.jpg");
+
+            //ProcessStartInfo start = new ProcessStartInfo();
+            //start.FileName = @"C:\Program Files\Python38\python.exe";
+            ////start.WorkingDirectory = @"D:\script";
+            ////start.Arguments = string.Format(@"C:\Users\Owner\source\repos\AttachmentProcessing\scripts\ocr.py -a {0} -b {1} ", "some param", "some other param");
+            ////start.Arguments = string.Format(@"C:\Users\Owner\source\repos\AttachmentProcessing\scripts\ocr.py");
+            //start.UseShellExecute = false;
+            //start.WindowStyle = ProcessWindowStyle.Hidden;
+            //start.CreateNoWindow = true;
+            //start.RedirectStandardOutput = true;
+            //using (Process process = Process.Start(start))
+            //{
+            //    using (StreamReader reader = process.StandardOutput)
+            //    {
+            //        string result = reader.ReadToEnd();
+            //        WriteActivity(result);
+            //        Clipboard.SetText(result);
+            //    }
+            //}
+
+            //LogError("This is a test error message to log");
+            //LogWriter lw = new LogWriter("Test");
+            //lw.LogWrite("This is a test error message");
+            //writeConfig("mailbox","IRS");
+            //var r = readConfig("mailbox");
+            //writeActivity(r);
+
+            //Crop(txtProcessFolder.Text, txtProcessFolder.Text);
+            //var en = Encrypt("Somepassword");
+            //MessageBox.Show(en);
+            //var dn = Decrypt(en);
+            //MessageBox.Show(dn);
+            //var path = @"D:\Dev\zMisc\attachments\";
+            ////read_files(txtTempFolder.Text); //1F99999999.pdf
+            ////var filename = path + "IHS_002.pdf";
+            ////var filename = path + "1F99999999.pdf";
+            ////var filename = path + "1C99999999.pdf";
+            //var filename = path + "1A99999999.pdf";
+            //writeActivity("Reading text from " + filename);
+            //txtAttOut.Text = extract_text(filename); 
+            //DirectorySearch(txtTempFolder.Text);

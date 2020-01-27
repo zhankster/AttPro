@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pALmKzNKblZ7VP9ef68bYXAqplZ9blAZveMj1R93RS8=</dsig:DigestValue>
+        <dsig:DigestValue>tAcrg/o04NA7dUj/ZsfA72BJoNzHCoShPokXZPyuTDw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,18 +66,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IronOcr.dll" size="43929088">
-      <assemblyIdentity name="IronOcr" version="4.4.0.21181" publicKeyToken="5F366048DC436899" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YphjVqRnweD+eq0cagXDOoeIeV32K3UiRxRpdbxsIs4=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Magick.NET-Q16-AnyCPU.dll" size="12805696">
       <assemblyIdentity name="Magick.NET-Q16-AnyCPU" version="7.14.5.0" publicKeyToken="2004825BADFA91EC" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -86,18 +74,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>SUZtrq9h9iQDnMcQwL8V7m2HlOhbCu9bL7s6At/Qd2M=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Patagames.Ocr.dll" size="54784">
-      <assemblyIdentity name="Patagames.Ocr" version="1.11.3.461" publicKeyToken="BE14D8E1FE46E570" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>U0pFXewOH79/UgOZVXhqv4+8jvfuDoGl5btR9pKtzrM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -167,31 +143,13 @@
       <dsig:DigestValue>cZJNgE/18poWu6bAVGgfnKnR7QP/Y/cuX41oWRd9obU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="scripts\ocr.py" size="539">
+  <file name="scripts\ocr.py" size="691">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>GLjgvb66tTtlBAZ4Uby1o6sUwgtpxEjCWfdItnjKIQw=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="x64\tesseract.dll" size="4727808">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>69uK7YWO5IYwugZ8FMYz63vCL6CGLIHsPuSg00lH3aY=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="x86\tesseract.dll" size="3970048">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YrcNvv0dAntlLkWpM3C2is3qyLupMWL+58C8MO1/maE=</dsig:DigestValue>
+      <dsig:DigestValue>PT3ntCnXuVY3HfoVttGznvS9/yGnDHHYitR/eOV7GAM=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

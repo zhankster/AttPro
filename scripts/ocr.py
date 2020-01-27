@@ -5,6 +5,7 @@ except ImportError:
 import pytesseract
 import argparse
 import sys
+from pathlib import Path
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 def ocr_core(filename):
@@ -15,4 +16,10 @@ def ocr_core(filename):
     return text
 
 print(ocr_core(sys.argv[1]))
+#pth = r'%s' % sys.argv[1]
+#print(ocr_core(pth))
+
+#directory = sys.argv[1]
+#new_file = Path(directory)
+#print(new_file)
 

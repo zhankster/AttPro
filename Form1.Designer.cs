@@ -53,6 +53,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnPythonFolder = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtPythonFolder = new System.Windows.Forms.TextBox();
             this.btnRenamedFolder = new System.Windows.Forms.Button();
             this.btnProcessFolder = new System.Windows.Forms.Button();
             this.btnDownloadFolder = new System.Windows.Forms.Button();
@@ -78,9 +81,6 @@
             this.lvProcessing = new System.Windows.Forms.ListView();
             this.colTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colDetails = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnPythonFolder = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtPythonFolder = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tpProcessing.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCheck)).BeginInit();
@@ -187,7 +187,6 @@
             this.txtAttOut.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtAttOut.Size = new System.Drawing.Size(289, 85);
             this.txtAttOut.TabIndex = 4;
-            this.txtAttOut.Visible = false;
             // 
             // btnDownload
             // 
@@ -217,7 +216,6 @@
             this.btnTest.TabIndex = 1;
             this.btnTest.Text = "Test";
             this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Visible = false;
             this.btnTest.Click += new System.EventHandler(this.BtnTest_Click);
             // 
             // tpSettings
@@ -356,6 +354,34 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Local Folders";
+            // 
+            // btnPythonFolder
+            // 
+            this.btnPythonFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPythonFolder.Location = new System.Drawing.Point(295, 147);
+            this.btnPythonFolder.Name = "btnPythonFolder";
+            this.btnPythonFolder.Size = new System.Drawing.Size(38, 22);
+            this.btnPythonFolder.TabIndex = 18;
+            this.btnPythonFolder.Text = ">>>";
+            this.btnPythonFolder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPythonFolder.UseVisualStyleBackColor = true;
+            this.btnPythonFolder.Click += new System.EventHandler(this.BtnFolder_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(14, 153);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Python";
+            // 
+            // txtPythonFolder
+            // 
+            this.txtPythonFolder.Location = new System.Drawing.Point(77, 147);
+            this.txtPythonFolder.Name = "txtPythonFolder";
+            this.txtPythonFolder.Size = new System.Drawing.Size(212, 20);
+            this.txtPythonFolder.TabIndex = 16;
             // 
             // btnRenamedFolder
             // 
@@ -603,34 +629,6 @@
             // 
             this.colDetails.Text = "Details";
             this.colDetails.Width = 800;
-            // 
-            // btnPythonFolder
-            // 
-            this.btnPythonFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPythonFolder.Location = new System.Drawing.Point(295, 147);
-            this.btnPythonFolder.Name = "btnPythonFolder";
-            this.btnPythonFolder.Size = new System.Drawing.Size(38, 22);
-            this.btnPythonFolder.TabIndex = 18;
-            this.btnPythonFolder.Text = ">>>";
-            this.btnPythonFolder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPythonFolder.UseVisualStyleBackColor = true;
-            this.btnPythonFolder.Click += new System.EventHandler(this.BtnFolder_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(14, 153);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Python";
-            // 
-            // txtPythonFolder
-            // 
-            this.txtPythonFolder.Location = new System.Drawing.Point(77, 147);
-            this.txtPythonFolder.Name = "txtPythonFolder";
-            this.txtPythonFolder.Size = new System.Drawing.Size(212, 20);
-            this.txtPythonFolder.TabIndex = 16;
             // 
             // Form1
             // 
